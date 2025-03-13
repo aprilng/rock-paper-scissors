@@ -3,10 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="javascript.js"></script>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <main>
+        <h1>Rock Paper Scissors</h1>
+
+        <!-- Computer's Choices -->
+        <div class ="row">
+            <div class="column">
+                <h2>Computer</h2>
+                <p id="computer-score">0</p>
+            </div>
+
+            <div id="computer-choices" class="choices">
+            <div id="rock" class="choice">
+                <p>✊</p>
+            </div>
+            <div id="paper" class="choice">
+                <p>✋</p>
+            </div>
+            <div id="scissors" class="choice">
+                <p>✌️</p>
+            </div>
+            </div>
+        </div>
     
+        <!-- Player's Choices -->
+        <div class ="row">
+            <div class="column">
+                <h2>You</h2>
+                <p id="player-score">0</p>
+            </div>
+            <div id="player-choices" class="choices">
+                <button id="rock">✊</button>
+                <button id="paper">✋</button>
+                <button id="scissors">✌️</button>
+            </div>
+        </div>
+
+        <!-- Game Status Section -->
+        <section>
+            <p id="result-message">Choose Rock, Paper, or Scissors to begin.</p>
+            <button id="next-round" style="display: none;">Next Round</button>
+            <button id="reset" style="display: none;">Reset</button>
+        </section>
+        
+        <div class="result">
+            <h2>Rounds</h2>
+            <p id="round">0 / 5</p>
+        </div>
+    </main>
+    <script src="javascript.js"></script>
 </body>
 </html>

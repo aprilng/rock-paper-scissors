@@ -1,0 +1,123 @@
+:root {
+    --main-primary-color: rgba(7,141,238,100%);
+    --dark-primary-color: rgba(3,81,171,100%);
+    --active-color:
+
+}
+
+body, html {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-family: Arial, sans-serif; /* Optional, for a clean look */
+}
+
+h1 { 
+    text-align: center;
+    font-size: 48px;
+}
+section {
+    display: flex; /* Use Flexbox for centering */
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the column has a height to center the content */
+    width: 200px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center;     /* Optional: vertically centers items if needed */
+    width: 100%;             /* Ensure it takes full width of its container */
+}
+
+.choices {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Distribute items evenly with equal space between them */
+    gap: 40px; /* Space between each choice */
+}
+
+button {
+    color: white; /* White text */
+    padding: 12px 20px; /* Padding for a nice size */
+    font-size: 16px; /* Text size */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+#next-round {
+    background-color: var(--main-primary-color);
+}
+
+
+#next-round:hover {
+    background-color: var(--dark-primary-color);
+}
+
+#computer-choices .choice {
+    display: inline-flex; /* Flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 80px; /* Button width */
+    height: 80px; /* Button height */
+    border-radius: 50%;
+    font-size: 40px;
+    border: 2px solid #ccc; /* Border to resemble a button */
+    background-color: #f0f0f0; /* Light gray background for disabled look */
+    color: #aaa; /* Gray text color for a disabled feel */
+    cursor: not-allowed; /* Disabled cursor style */
+    opacity: 0.5; /* Dimmed to indicate a disabled state */
+    transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+#player-choices button {
+    display: inline-flex; /* Flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 80px; /* Button width */
+    height: 80px; /* Button height */
+    border-radius: 50%; /* Make it circular */
+    font-size: 40px; /* Adjust emoji size */
+    border: 2px solid #ccc; /* Border style */
+}
+
+#player-choices button:hover {
+    background-color: #e0e0e0; /* Slightly darker background on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+#player-choices button:active {
+    background-color: #d0d0d0; /* Even darker background on click */
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+#player-choices.no-hover button {
+    pointer-events: none; /* Disable all interaction (including hover) */
+}
+
+/* Ensure no hover styles are applied when 'no-hover' class is added */
+#player-choices.no-hover button:hover {
+    background-color: initial; /* Reset background color */
+    transform: initial; /* Reset scale transform */
+}
